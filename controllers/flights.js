@@ -23,7 +23,6 @@ async function show(req, res, next) {
     }
 
     const tickets = await Ticket.find({ flight: flight._id }).exec();
-    console.log(tickets)
 
     res.render('flights/show', { flight, tickets, title: 'Flight Details' });
   } catch (error) {
