@@ -13,8 +13,8 @@
     </tr>
   </thead>
   <tbody>
+    <% const now = new Date(); %>
     <% flights.sort((a, b) => new Date(a.departs) - new Date(b.departs)).forEach((flight) => { %>
-      <% const now = new Date(); %>
       <tr class="<%= flight.departs < now ? 'departed' : '' %>">
         <td><%= flight.airline %></td>
         <td><%= flight.airport %></td>
@@ -27,4 +27,3 @@
 </table>
 
 <%- include('../partials/footer') %>
-

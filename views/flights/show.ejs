@@ -98,14 +98,10 @@
   
 </table>
 
-<form action="/flights/<%= flight._id %>/tickets" method="POST">
-  <label>Seat:
-    <input name="seat" required pattern="[A-F][1-9]\d?">
-  </label><br>
-  <label>Price:
-    <input type="number" name="price">
-  </label><br>
-  <button type="submit">Add Ticket</button>
-</form>
+<!-- New Ticket Link/Button -->
+<a id="newTicket" href="/flights/<%= flight._id %>/tickets/new" class="btn btn-primary">
+  <span style="color:#cd66ff">N</span><span style="color:#ff6599">e</span><span style="color:#ff0000">w</span> <span style="color:#ff8e00">T</span><span style="color:#ffff00">i</span><span style="color:#008e00">c</span><span style="color:#00c0c1">k</span><span style="color:#400098">e</span><span style="color:#8e008e">t</span>
+</a>
+
 
 <%- include('../partials/footer') %>

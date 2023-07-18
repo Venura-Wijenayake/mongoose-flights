@@ -32,13 +32,10 @@ const flightSchema = new Schema({
   },
   departs: {
     type: Date,
-    default: () => {
-      const oneYearFromNow = new Date();
-      oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
-      return oneYearFromNow;
-    }
+    required: true,
+    default: Date.now
   },
-  destinations: [destinationSchema] // Add destinations property
+  destinations: [destinationSchema]
 });
 
 module.exports = mongoose.model('Flight', flightSchema);

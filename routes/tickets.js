@@ -6,5 +6,6 @@ router.get('/flights/:id/tickets/new', ticketsCtrl.new);
 router.post('/flights/:id/tickets', ticketsCtrl.createTicket);
 // Make sure the route is correctly defined with ":flightId" and ":ticketId" placeholders
 router.delete('/flights/:flightId/tickets/:ticketId', ticketsCtrl.delete);
+router.get('/flights/:id/tickets/new', ticketsCtrl.newTicketForm);
 
 module.exports = router;
