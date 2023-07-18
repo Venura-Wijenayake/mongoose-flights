@@ -81,7 +81,7 @@
       <% tickets.forEach(function (ticket) { %>
         <tr>
           <td><%= ticket.seat %></td>
-          <td><%= ticket.price %></td>
+          <td>$<%= ticket.price %></td>
           <td>
             <form action="/flights/<%= flight._id %>/tickets/<%= ticket._id %>?_method=DELETE" method="POST"> <!-- Modify the form action for tickets -->
               <button type="submit">Delete</button>
